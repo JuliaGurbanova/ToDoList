@@ -31,7 +31,6 @@ class ViewModel: ObservableObject {
     }
     
     func save() {
-        print("Saving")
         do {
             let data = try JSONEncoder().encode(items)
             try data.write(to: savePath, options: [.atomic, .completeFileProtection])
